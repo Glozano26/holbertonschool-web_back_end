@@ -5,4 +5,4 @@ from typing import List, Union, Tuple
 
 def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """Complex types"""
-    return (k, v)
+    return (k, v ** 2)
