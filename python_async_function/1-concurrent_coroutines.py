@@ -4,7 +4,7 @@
 import asyncio
 import random
 from typing import List
-from asyncio import as_completed
+# from asyncio import as_completed
 
 
 wait_random = __import__('0-basic_async_syntax').wait_random
