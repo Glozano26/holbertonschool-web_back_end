@@ -14,8 +14,8 @@ async def wait_random(max_delay: int = 10) -> float:
     return delay
 
 
-async def main():
-    random_time = await wait_random()
+# async def main():
+#     random_time = await wait_random()
 
 
-asyncio.run(main())
+# asyncio.run(main())
