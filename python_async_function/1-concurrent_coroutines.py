@@ -2,7 +2,6 @@
 """Let's execute multiple coroutines at the same time with async
 """
 import asyncio
-import random
 from typing import List
 # from asyncio import as_completed
 
