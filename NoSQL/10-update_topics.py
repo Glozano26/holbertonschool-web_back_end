@@ -9,6 +9,6 @@ of a school document based on the name:
 
 def update_topics(mongo_collection, name, topics):
     """Change school topics"""
-    filter = {'name'}
-    update = {'$set': {'topics'}}
+    filter = {'name': name}
+    update = {'$set': {'topics': topics}}
     topics_upd = mongo_collection.update_many(filter, update)
