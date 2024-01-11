@@ -8,4 +8,4 @@ school having a specific topic:
 
 def schools_by_topic(mongo_collection, topic) -> list:
     """returns a list with a specific topic"""
-    return ([x for x in mongo_collection.find({'topic': topic})])
+    return [x for x in mongo_collection.find({'topic': topic})]
