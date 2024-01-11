@@ -14,4 +14,4 @@ def schools_by_topic(mongo_collection, topic):
     for school in topic_search:
         schools.append(school)
 
-    return list(schools)
+    return schools
