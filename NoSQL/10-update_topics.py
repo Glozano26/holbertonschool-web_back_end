@@ -9,4 +9,5 @@ of a school document based on the name:
 
 def update_topics(mongo_collection, name, topics):
     """Change school topics"""
-    return mongo_collection.update_many(name, topics)
+    topics_upd = mongo_collection.update_many(name, topics)
+    return topics_upd.inserted_id
