@@ -2,7 +2,7 @@
 """Simple helper function"""
 
 
-def index_range(page, page_size) -> int:
+def index_range(page: int, page_size: int) -> tuple:
     """return a  tuple of size two containing a start index
     and an end index """
-    return page, page_size
+    return (page, page_size)
