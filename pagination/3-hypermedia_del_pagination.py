@@ -38,7 +38,7 @@ class Server:
                 i: dataset[i] for i in range(len(dataset))
             }
         return self.__indexed_dataset
-    
+
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """return a list with the values of the index"""
         assert isinstance(page, int) and page > 0
@@ -53,24 +53,25 @@ class Server:
         return dataset[start_index:end_index]
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
-            """"""
-            assert isinstance(index, int) and index >= 0
-            assert isinstance(page_size, int) and page_size > 0
+        """Deletion-resilient hypermedia pagination"""
+        assert isinstance(index, int) and index >= 0
+        assert isinstance(page_size, int) and page_size > 0
 
-            dataset = self.dataset()
-            assert index <= len(dataset), f"Index {index} out of range"
+        dataset = self.dataset()
+        assert index <= len(dataset), f"Index {index} out of range"
 
-            start_index = index
-            end_index = index + page_size
-            end_index = min(end_index, len(dataset))
+        start_index = index
+        end_index = index + page_size
+        end_index = min(end_index, len(dataset))
 
-            dict_returns = {
-                "index": start_index,
-                "data": dataset[start_index:end_index],
-                "page_size": page_size,
-                "next_index": end_index
-            }
-            return dict_returns
+        dict_returns = {
+            "index": start_index,
+            "data": dataset[start_index:end_index],
+            "page_size": page_size,
+            "next_index": end_index
+        }
+        return dict_returns
+
 
 def index_range(page: int, page_size: int) -> tuple:
     """return a  tuple of size two containing a start index
