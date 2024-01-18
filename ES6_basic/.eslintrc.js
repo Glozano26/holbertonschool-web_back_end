@@ -30,14 +30,6 @@ module.exports = {
       {
         files: ['*.js'],
         excludedFiles: 'babel.config.js',
-      },
-      {
-        files: ['*.js'],
-        excludedFiles: 'babel.config.js',
-        parserOptions: {
-        ecmaVersion: 2020,
-        },
-      },
+      }
     ]
   };
-  
