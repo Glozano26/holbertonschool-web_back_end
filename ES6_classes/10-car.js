@@ -20,7 +20,6 @@ export default class Car {
   }
 
   [cloneSymbol]() {
-    // Create a new instance of the same class with the current property values
     const clonedCar = new this.constructor(this._brand, this._motor, this._color);
     return clonedCar;
   }
